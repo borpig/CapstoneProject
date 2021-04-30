@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<head>
+    <title>Bus App: Input page</title>
+</head>
+<br>
+<div class="container">
+    <h3 class="text-center"> Hi! This is a bus app to show you the closest bus stop to your current location, and the
+        list of bus
+        services that also go to that bus stop. You can choose either to input your address or exact latitude and
+        longitude. Happy travelling! </h3>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="btn-toolbar" >
+        <div class="col text-center justify-content-center d-flex">
+            <a class="btn btn-primary" style="margin:5px;" href="/manual" role="button">
+                Manually input your latitude and longitude.</a>
+            <br>
+            <a class="btn btn-primary" style="margin:5px;" href="/address" role="button">
+                Input your address.</a>
+        </div>
+    </div>
+</div>
+    {% endblock %}

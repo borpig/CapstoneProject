@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Bus App: Address input page.</title>
+<head>
+    <h3 class="font-weight-normal text-center"> Key in your address below. Be as specific as you can! </h3>
+</head>
+<br>
+
+{% if err %}
+<p class="text-center"> Aiyo! Invalid address! Please try again. To remind you ah, address cannot be number hor!
+</p>
+
+<div class="form-group">
+    <form action="/result" method="GET">
+    <label for="address"> Your address: </label>
+    <input type="text" class="form-control" 
+    name="address" placeholder="Enter address"> <br><br><br> 
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button><br />
+</form>
+{% else %}
+<form action="/result" method="GET">
+<div class="form-group">
+    <label for="address"> Your address: </label>
+    <input type="text" class="form-control" 
+    name="address" placeholder="Enter address"> <br><br><br> 
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endif %}
+
+<br><br>
+<a class="btn btn-primary" href="/" role="button">
+    Go back to home page.</a>
+</form>
+
+{% endblock %}

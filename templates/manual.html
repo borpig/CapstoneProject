@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title>Bus App: Manual input page.</title>
+    <h2 class="text-center"> Key in your input below. </h2>
+</head>
+<br>
+{% if err %}
+<p class="text-center"> Aiyo! Invalid latitude or longitude! Please try again. To remind you ah, valid latitude must be number between -90 to 90!
+    Valid longitude must be number between -180 to 180 hor!
+</p>
+
+<form action="/results" method="get">
+    <div class="form-group">
+<label for="user_latitude"> Your latitude: </label>
+<input type="text" class="form-control" 
+name="user_latitude" placeholder="Enter latitude"><br><br>
+</div>
+<div class="form-group">
+<label for="user_longitude"> Your longitude: </label>
+<input type="text" class="form-control" 
+name="user_longitude" placeholder="Enter longitude"> <br><br><br> 
+</div>
+<button type="submit" class="btn btn-primary">Submit</button><br />
+
+{% else %}
+<form action="/results" method="get">
+    <div class="form-group">
+<label for="user_latitude"> Your latitude: </label>
+<input type="text" class="form-control" 
+name="user_latitude" placeholder="Enter latitude">
+<small id="latHelpBlock" class="form-text text-muted">
+   Your latitude must be between -90 to 90. 
+  </small>
+</div>
+<br><br>
+<div class="form-group">
+<label for="user_longitude"> Your longitude: </label>
+<input type="text" class="form-control" 
+name="user_longitude" placeholder="Enter longitude">
+<small id="longHelpBlock" class="form-text text-muted">
+    Your longitude must be between -180 to 180. 
+   </small>
+</div>
+<br><br>
+<button type="submit" class="btn btn-primary">Submit</button>
+{% endif %}
+
+<br><br>
+<a class="btn btn-primary" href="/" role="button">
+    Go back to home page.</a>
+</form>
+
+{% endblock %}

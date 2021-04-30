@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Bus App: Help page.</title>
+<head>
+    <h3 class="font-weight-bolder text-center"> I see you need some help! No problem, here are some common problems when using the app. </h3>
+</head>
+<br>
+
+<body>
+<p class="text-lg-center"> 
+    <h5> Why is my latitude and longitude invalid?</h5>
+    To input your latitude and longitude, simply key in the numbers accordingly! 
+    For latitude, your number must be between -90 to 90, while your latitude must be between 
+    -180 to 180! For your information, Singapore's latitude and longitude is 1.3521 and 103.8198 respectively!
+
+    <br><br>
+    <h5>Why is my address search not yielding accurate results?</h5>
+    When using the address function, do note that your input must be as precise as possible, and not just the main street name.
+    For example, when searching for the nearest bus stop to Toa Payoh Swimming Complex, search for 'Toa Payoh Swimming Cplx' or
+    'Toa Payoh Swimming Complex', and not merely 'Toa Payoh'! If not, the search result may be inaccurate. Most probably, you will 
+    end up at Larkin Terminal, located all the way in Johor Bahru :), or if are luckier, Changi Beach. 
+</p>
+<br>
+<h4 class="text-center"> Thank you once again for using my app. Hope you have a pleasant bus riding journey ahead! </h4>
+</body>
+<br> 
+<div class="col text-center">
+<a class="btn btn-primary" href="/" role="button">
+    Ok, got it! Return to home.</a>
+</div>
+{% endblock %}
